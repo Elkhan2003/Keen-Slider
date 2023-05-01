@@ -1,0 +1,26 @@
+.home__page {
+	.content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+
+	a {
+		margin: 15px 0;
+		display: block;
+		text-decoration: none;
+		color: #dadada;
+	}
+
+	.title {
+		span {
+			text-shadow: 0px 0px 10px purple;
+			color: dodgerblue;
+		}
+	}
+
+	.slider {
+		width: 100%;
+	}
+}
