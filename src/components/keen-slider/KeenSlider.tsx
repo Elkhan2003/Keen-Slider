@@ -150,10 +150,9 @@ const KeenSlider: FC = () => {
 
 			{loaded && instanceRef.current && (
 				<div className={scss.dots}>
-					{[
-						...Array(instanceRef.current.track.details.slides.length).keys()
-					].map((idx) => {
-						return (
+					{Array.from(
+						{ length: instanceRef.current.track.details.slides.length },
+						(_, idx) => (
 							<button
 								key={idx}
 								onClick={() => {
@@ -165,8 +164,8 @@ const KeenSlider: FC = () => {
 										: `${scss.dot}`
 								}
 							></button>
-						);
-					})}
+						)
+					)}
 				</div>
 			)}
 		</>
