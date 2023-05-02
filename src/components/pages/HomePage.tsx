@@ -2,6 +2,8 @@ import Head from "next/head";
 import React, { FC } from "react";
 import scss from "@/components/pages/Style.module.scss";
 import KeenSlider from "@/components/keen-slider/KeenSlider";
+import Weather from "@/components/weather/Weather";
+import Tabs from "@/components/tabs/Tabs";
 
 const HomePage: FC = () => {
 	return (
@@ -20,6 +22,8 @@ const HomePage: FC = () => {
 						<div className={scss.slider}>
 							<KeenSlider />
 						</div>
+						<Weather />
+						<Tabs />
 					</div>
 				</div>
 			</div>
