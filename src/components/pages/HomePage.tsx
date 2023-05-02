@@ -14,15 +14,15 @@ const HomePage: FC = () => {
 			<div className={scss.home__page}>
 				<div className="container">
 					<div className={scss.content}>
-						<a href="https://keen-slider.io/" target="_blank">
-							<h1 className={scss.title}>
-								Keen <span>Slider</span>👈
-							</h1>
-						</a>
-						<div className={scss.slider}>
-							<KeenSlider />
-						</div>
-						<Weather />
+						{/*<a href="https://keen-slider.io/" target="_blank">*/}
+						{/*	<h1 className={scss.title}>*/}
+						{/*		Keen <span>Slider</span>👈*/}
+						{/*	</h1>*/}
+						{/*</a>*/}
+						{/*<div className={scss.slider}>*/}
+						{/*	<KeenSlider />*/}
+						{/*</div>*/}
+						{/*<Weather />*/}
 						<Tabs />
 					</div>
 				</div>

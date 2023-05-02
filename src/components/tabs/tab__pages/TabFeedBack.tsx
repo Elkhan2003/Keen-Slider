@@ -2,49 +2,44 @@ import React, { FC, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import scss from "./TabPages.module.scss";
-import Image from "next/image";
-import pic1 from "@/components/keen-slider/img/anime1.jpg";
-import pic2 from "@/components/keen-slider/img/anime2.jpg";
-import pic3 from "@/components/keen-slider/img/anime3.jpg";
-import pic4 from "@/components/keen-slider/img/anime4.jpg";
-import pic5 from "@/components/keen-slider/img/anime5.jpg";
-import pic6 from "@/components/keen-slider/img/anime6.jpg";
-import pic7 from "@/components/keen-slider/img/anime7.jpg";
-import { ArrowLeftIcon, ArrowRightIcon } from "@/components/svgs";
+import { ArrowLeftIcon, ArrowRightIcon, StarFiveIcon } from "@/components/svgs";
 
 interface imageProps {
 	id: number;
-	img: any;
+	title: string;
+	text: string;
+	user: string;
+	date: string;
 }
 
 const images: imageProps[] = [
 	{
 		id: 1,
-		img: pic1
+		title: "Amazing!",
+		text: "Amazing, great layout for captions, better accuracy than TikTok, and it’s free with no ads or watermarks? What’s the catch? Thank you.",
+		user: "Elcho911",
+		date: "14/10/2003"
 	},
 	{
 		id: 2,
-		img: pic2
+		title: "Works as advertised!",
+		text: "This app does exactly what it says it will do! Great app if you want your video captioned without having to do it yourself!",
+		user: "Sher911",
+		date: "30/09/2006"
 	},
 	{
 		id: 3,
-		img: pic3
+		title: "Download now!",
+		text: "If you not convinced, let me tell you right now: the qualities of my videos skyrocketed with THIS ONE APP and my videos look so clean and professional! If you’re at all interested in sprucing up your video content, this is the app for you!",
+		user: "Tima911",
+		date: "19/02/2004"
 	},
 	{
 		id: 4,
-		img: pic4
-	},
-	{
-		id: 5,
-		img: pic5
-	},
-	{
-		id: 6,
-		img: pic6
-	},
-	{
-		id: 7,
-		img: pic7
+		title: "Content creator need this",
+		text: "By far the best all-you-need app for existing or aspiring content creators! 🙌🏻",
+		user: "Elcho911",
+		date: "14/10/2003"
 	}
 ];
 
@@ -94,7 +89,7 @@ const TabFeedBack: FC = () => {
 					if (mouseOver) return;
 					timeout = setTimeout(() => {
 						slider.next();
-					}, 1800);
+					}, 1800000);
 				}
 
 				slider.on("created", () => {
@@ -122,7 +117,16 @@ const TabFeedBack: FC = () => {
 					<div ref={ref} className="keen-slider">
 						{images.map((item) => (
 							<div key={item.id} className="keen-slider__slide">
-								<Image className={scss.img} src={item.img} alt={"anime"} />
+								<div className={scss.card}>
+									<div className={scss.icon}>
+										<StarFiveIcon />
+									</div>
+									<h5 className={scss.title}>{item.title}</h5>
+									<p className={scss.text}>{item.text}</p>
+									<h5 className={scss.user__date}>
+										{item.user}, {item.date}
+									</h5>
+								</div>
 							</div>
 						))}
 					</div>
