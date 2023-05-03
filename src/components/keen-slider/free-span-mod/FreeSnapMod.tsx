@@ -57,7 +57,8 @@ const FreeSnapMod: FC = () => {
 			loop: true,
 			mode: "free-snap",
 			slides: {
-				perView: 1
+				perView: 1,
+				spacing: 10
 			},
 
 			breakpoints: {

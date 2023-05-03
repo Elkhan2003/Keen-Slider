@@ -95,6 +95,10 @@ const Thumbnails: FC = () => {
 		{
 			// loop: true,
 
+			slides: {
+				spacing: 10
+			},
+
 			// ! navigation + buttons
 			initial: 0,
 			created() {
