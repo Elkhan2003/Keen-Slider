@@ -47,7 +47,9 @@
 			}
 
 			.user__date {
-				color: #7e12ff;
+				//color: #7e12ff;
+				color: #ffe6a9;
+				opacity: 0.8;
 				letter-spacing: 0.05em;
 				text-transform: uppercase;
 				margin-right: 5px;
@@ -68,7 +70,8 @@
 
 		.dot {
 			border: none;
-			background: dodgerblue;
+			//background: dodgerblue;
+			background: #ffe6a9;
 			opacity: 0.2;
 			border-radius: 50%;
 			margin: 0 5px;
