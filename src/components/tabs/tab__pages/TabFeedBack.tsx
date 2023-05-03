@@ -52,7 +52,8 @@ const TabFeedBack: FC = () => {
 			loop: true,
 			// mode: "free-snap",
 			slides: {
-				perView: 1
+				perView: 1,
+				spacing: 10
 			},
 
 			breakpoints: {
@@ -130,48 +131,59 @@ const TabFeedBack: FC = () => {
 							</div>
 						))}
 					</div>
-
-					{loaded && instanceRef.current && (
-						<>
-							<span
-								className={`${scss.arrow} ${scss.arrow__left}`}
-								onClick={(e: any) =>
-									e.stopPropagation() || instanceRef.current?.prev()
-								}
-							>
-								<ArrowLeftIcon />
-							</span>
-
-							<span
-								className={`${scss.arrow} ${scss.arrow__right}`}
-								onClick={(e: any) =>
-									e.stopPropagation() || instanceRef.current?.next()
-								}
-							>
-								<ArrowRightIcon />
-							</span>
-						</>
-					)}
 				</div>
 
 				{loaded && instanceRef.current && (
 					<div className={scss.dots}>
+						{/* ! arrow__left */}
+						<div>
+							{loaded && instanceRef.current && (
+								<>
+									<span
+										className={`${scss.arrow} ${scss.arrow__left}`}
+										onClick={(e: any) =>
+											e.stopPropagation() || instanceRef.current?.prev()
+										}
+									>
+										<ArrowLeftIcon />
+									</span>
+								</>
+							)}
+						</div>
+						{/* ! dot */}
 						{Array.from(
 							{ length: instanceRef.current.track.details.slides.length },
 							(_, idx) => (
-								<button
-									key={idx}
-									onClick={() => {
-										instanceRef.current?.moveToIdx(idx);
-									}}
-									className={
-										currentSlide === idx
-											? `${scss.dot} ${scss.active}`
-											: `${scss.dot}`
-									}
-								></button>
+								<>
+									<button
+										key={idx}
+										onClick={() => {
+											instanceRef.current?.moveToIdx(idx);
+										}}
+										className={
+											currentSlide === idx
+												? `${scss.dot} ${scss.active}`
+												: `${scss.dot}`
+										}
+									></button>
+								</>
 							)
 						)}
+						{/* ! arrow__right */}
+						<div>
+							{loaded && instanceRef.current && (
+								<>
+									<span
+										className={`${scss.arrow} ${scss.arrow__right}`}
+										onClick={(e: any) =>
+											e.stopPropagation() || instanceRef.current?.next()
+										}
+									>
+										<ArrowRightIcon />
+									</span>
+								</>
+							)}
+						</div>
 					</div>
 				)}
 			</div>
