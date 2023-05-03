@@ -52,16 +52,17 @@ const TabFeedBack: FC = () => {
 			loop: true,
 			// mode: "free-snap",
 			slides: {
+				origin: "center",
 				perView: 1,
 				spacing: 10
 			},
 
 			breakpoints: {
 				"(min-width: 650px)": {
-					slides: { perView: 2, spacing: 15 }
+					slides: { origin: "center", perView: 2, spacing: 15 }
 				},
 				"(min-width: 1000px)": {
-					slides: { perView: 3, spacing: 25 }
+					slides: { origin: "center", perView: 3, spacing: 25 }
 				}
 			},
 
