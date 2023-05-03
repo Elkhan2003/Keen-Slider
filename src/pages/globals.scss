@@ -31,3 +31,13 @@
 	max-width: 1280px;
 	padding: 0 20px;
 }
+
+.thumbnail {
+	.keen-slider__slide {
+		-webkit-filter: grayscale(100%);
+
+		&.active {
+			-webkit-filter: grayscale(0%);
+		}
+	}
+}

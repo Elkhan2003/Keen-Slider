@@ -1,15 +1,15 @@
 import React, { FC, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import scss from "./KeenSlider.module.scss";
+import scss from "./FreeSnapMod.module.scss";
 import Image from "next/image";
-import pic1 from "@/components/keen-slider/img/anime1.jpg";
-import pic2 from "@/components/keen-slider/img/anime2.jpg";
-import pic3 from "@/components/keen-slider/img/anime3.jpg";
-import pic4 from "@/components/keen-slider/img/anime4.jpg";
-import pic5 from "@/components/keen-slider/img/anime5.jpg";
-import pic6 from "@/components/keen-slider/img/anime6.jpg";
-import pic7 from "@/components/keen-slider/img/anime7.jpg";
+import pic1 from "@/assets/anime1.jpg";
+import pic2 from "@/assets/anime2.jpg";
+import pic3 from "@/assets/anime3.jpg";
+import pic4 from "@/assets/anime4.jpg";
+import pic5 from "@/assets/anime5.jpg";
+import pic6 from "@/assets/anime6.jpg";
+import pic7 from "@/assets/anime7.jpg";
 import { ArrowLeftIcon, ArrowRightIcon } from "@/components/svgs";
 
 interface imageProps {
@@ -48,7 +48,7 @@ const images: imageProps[] = [
 	}
 ];
 
-const KeenSlider: FC = () => {
+const FreeSnapMod: FC = () => {
 	const [currentSlide, setCurrentSlide] = useState<any>(0);
 	const [loaded, setLoaded] = useState<any>(false);
 	const [ref, instanceRef] = useKeenSlider<HTMLDivElement>(
@@ -172,4 +172,4 @@ const KeenSlider: FC = () => {
 		</>
 	);
 };
-export default KeenSlider;
+export default FreeSnapMod;
