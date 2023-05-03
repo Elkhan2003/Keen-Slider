@@ -104,8 +104,11 @@
 			}
 
 			@media (max-width: 500px) {
-				opacity: 0.4;
 				cursor: default;
+
+				&:hover {
+					opacity: 0.4;
+				}
 			}
 		}
 
