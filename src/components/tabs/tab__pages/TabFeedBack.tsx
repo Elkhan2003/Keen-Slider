@@ -154,19 +154,17 @@ const TabFeedBack: FC = () => {
 						{Array.from(
 							{ length: instanceRef.current.track.details.slides.length },
 							(_, idx) => (
-								<>
-									<button
-										key={idx}
-										onClick={() => {
-											instanceRef.current?.moveToIdx(idx);
-										}}
-										className={
-											currentSlide === idx
-												? `${scss.dot} ${scss.active}`
-												: `${scss.dot}`
-										}
-									></button>
-								</>
+								<button
+									key={idx}
+									onClick={() => {
+										instanceRef.current?.moveToIdx(idx);
+									}}
+									className={
+										currentSlide === idx
+											? `${scss.dot} ${scss.active}`
+											: `${scss.dot}`
+									}
+								></button>
 							)
 						)}
 						{/* ! arrow__right */}
