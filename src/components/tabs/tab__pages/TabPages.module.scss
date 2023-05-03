@@ -104,6 +104,7 @@
 			}
 
 			@media (max-width: 500px) {
+				opacity: 0.4;
 				cursor: default;
 			}
 		}
@@ -113,6 +114,10 @@
 
 			&:hover {
 				padding-right: 60px;
+
+				@media (max-width: 500px) {
+					padding-right: 50px;
+				}
 			}
 		}
 
@@ -121,6 +126,10 @@
 
 			&:hover {
 				padding-left: 60px;
+
+				@media (max-width: 500px) {
+					padding-left: 50px;
+				}
 			}
 		}
 	}
